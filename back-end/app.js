@@ -78,5 +78,15 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/aboutus', async (req, res) => {
+  res.json({
+    paragraphs: [
+      "My name is Harrison Douglass, and I am a third year student in the College of Arts and Sciences at New York University.",
+      "Originally from the Washington, DC area, I am majoring in Computer Science and minoring in Business Studies."
+    ],
+    imageURL: "/photo.jpg"
+  })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
